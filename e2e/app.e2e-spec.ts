@@ -1,4 +1,5 @@
 import { GdiwebsitePage } from './app.po';
+const expect = global['chai'].expect;
 
 describe('gdiwebsite App', () => {
   let page: GdiwebsitePage;
@@ -9,6 +10,6 @@ describe('gdiwebsite App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).to.equal('app works!');
   });
 });
