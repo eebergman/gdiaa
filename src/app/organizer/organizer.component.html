@@ -1,0 +1,30 @@
+organizer
+
+<link media="all" type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation-flex.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,500" rel="stylesheet">
+
+<div class="row columns">
+  <button (click)="login()" *ngIf="!name">Anonymous Login</button>
+
+  <input type="text" id="message" *ngIf="name" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+  <div id="details-container">
+      <p *ngFor="let item of items | async"><img src="../assets/images/pin.svg">{{item.message}}</p>
+  </div>
+</div>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDX5q__U2DcJFDTh4WGticxKWL0T_KVDEc",
+    authDomain: "gdiaa-adeaf.firebaseapp.com",
+    databaseURL: "https://gdiaa-adeaf.firebaseio.com",
+    projectId: "gdiaa-adeaf",
+    storageBucket: "gdiaa-adeaf.appspot.com",
+    messagingSenderId: "26313623630"
+  };
+  firebase.initializeApp(config);
+</script>

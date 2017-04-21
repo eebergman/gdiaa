@@ -1,3 +1,46 @@
-<h1>
-  {{title}}
-</h1>
+<aside class="sidebar">
+    <a class="logo" routerLink="/home" (click)="setTitle( 'Girl Develop It Ann Arbor' )">
+        <img src="../assets/images/logo-aa-pink.png" alt="Girl Develop It Ann Arbor">
+    </a>
+
+    <nav>
+        <ul class="list--horz list--cozy">
+            <li><a href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" title="Meetup" target="_blank"><i class="fa fa-calendar"></i></a></li>
+            <li><a href="http://twitter.com/gdiannarbor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://www.facebook.com/GirlDevelopItAnnArbor" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.linkedin.com/groups?gid=6669157" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="http://gdiaa-slack.herokuapp.com/" target="_blank"><i class="fa fa-slack"></i></a></li>
+        </ul>
+
+        <ul>
+            <li><strong><a routerLink="/events" (click)="setTitle( 'Events - GDI Ann Arbor' )">
+          Event Slides</a></strong></li>
+            <li><strong><a routerLink="/sponsors" (click)="setTitle( 'Sponsors - GDI Ann Arbor' )">
+          Community Sponsors</a></strong></li>
+            <li><strong><a routerLink="/resources" (click)="setTitle( 'Resources - GDI Ann Arbor' )">
+          Community Resources</a></strong></li>
+            <li><strong><a routerLink="/survey" (click)="setTitle( 'Survey - GDI Ann Arbor' )">
+          Community Survey</a></strong></li>
+            <li><a routerLink="/scholarship" (click)="setTitle( 'Scholarship - GDI Ann Arbor' )">
+          Scholarship Application</a></li>
+            <li><a routerLink="/volunteer" (click)="setTitle( 'Volunteer - GDI Ann Arbor' )">
+          Volunteer Form</a></li>
+            <li><a routerLink="/sponsorship" (click)="setTitle( 'Sponsorship - GDI Ann Arbor' )">
+          Sponsorship Inquiry</a>
+            </li>
+            <li><a routerLink="/newsletter" (click)="setTitle( 'Newsletter - GDI Ann Arbor' )">
+          Newsletter Signup</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<header class="header_bar">
+    <div class="about">
+        <div class="meetups__join">
+            <strong><a routerLink="/about" (click)="setTitle( 'About Us - GDI Ann Arbor' )" style="color: white">
+        About Us</a></strong>
+        </div>
+    </div>
+</header>
+
+<router-outlet></router-outlet>
