@@ -6,7 +6,6 @@ import { Angular2FontAwesomeModule } from 'angular2-font-awesome/angular2-font-a
 
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
-import { Config } from '../../config';
 
 import { AppComponent } from './app.component';
 import { OrganizerComponent } from './organizer/organizer.component';
@@ -22,14 +21,14 @@ import { SponsorshipComponent } from './views/pages/sponsorship.component';
 import { SurveyComponent } from './views/pages/survey.component';
 import { VolunteerComponent } from './views/pages/volunteer.component';
 
-export const firebaseConfig = {
-  apiKey: Config.myApiKey,
-  authDomain: Config.myAuthDomain,
-  databaseURL: Config.myDatabaseURL,
-  projectId: Config.myProjectId,
-  storageBucket: Config.myStorageBucket,
-  messagingSenderId: Config.myMessagingSenderId
-};
+  var config = {
+    apiKey: "AIzaSyDX5q__U2DcJFDTh4WGticxKWL0T_KVDEc",
+    authDomain: "gdiaa-adeaf.firebaseapp.com",
+    databaseURL: "https://gdiaa-adeaf.firebaseio.com",
+    projectId: "gdiaa-adeaf",
+    storageBucket: "gdiaa-adeaf.appspot.com",
+    messagingSenderId: "26313623630"
+  };
 
 @NgModule({
   declarations: [
