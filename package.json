@@ -8,10 +8,18 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "startNode": "node server.js",
+    "postinstall": "ng build --aot -prod"
+  },
+  "engines": {
+    "node": "7.9.0",
+    "npm": "4.2.0"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -29,8 +37,6 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0",
-    "@angular/compiler-cli": "^4.0.0",
     "@types/chai": "^3.5.1",
     "@types/chai-as-promised": "^0.0.30",
     "@types/mocha": "^2.2.41",
