@@ -11,7 +11,7 @@ export class OrganizerComponent implements OnInit {
 
    items: FirebaseListObservable<any>;
   name: any;
-  msgVal: string = '';
+  msgVal = '';
 
   constructor(public angularFire: AngularFire) {
     this.items = angularFire.database.list('/messages', {
@@ -20,8 +20,8 @@ export class OrganizerComponent implements OnInit {
       }
     });
 
-    this.angularFire.auth.subscribe(auth => { 
-      if(auth) {
+    this.angularFire.auth.subscribe(auth => {
+      if (auth) {
         this.name = auth;
       }
     });

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './events.component.html',
 })
 export class EventsComponent implements OnInit {
-  title = 'Events - GDI Ann Arbor'
+  title = 'Events - GDI Ann Arbor';
 
   constructor() { }
 

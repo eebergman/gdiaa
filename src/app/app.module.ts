@@ -21,13 +21,13 @@ import { SponsorshipComponent } from './views/pages/sponsorship.component';
 import { SurveyComponent } from './views/pages/survey.component';
 import { VolunteerComponent } from './views/pages/volunteer.component';
 
-  var config = {
-    apiKey: "AIzaSyDX5q__U2DcJFDTh4WGticxKWL0T_KVDEc",
-    authDomain: "gdiaa-adeaf.firebaseapp.com",
-    databaseURL: "https://gdiaa-adeaf.firebaseio.com",
-    projectId: "gdiaa-adeaf",
-    storageBucket: "gdiaa-adeaf.appspot.com",
-    messagingSenderId: "26313623630"
+  const firebaseConfig = {
+    apiKey: 'AIzaSyDX5q__U2DcJFDTh4WGticxKWL0T_KVDEc',
+    authDomain: 'gdiaa-adeaf.firebaseapp.com',
+    databaseURL: 'https://gdiaa-adeaf.firebaseio.com',
+    projectId: 'gdiaa-adeaf',
+    storageBucket: 'gdiaa-adeaf.appspot.com',
+    messagingSenderId: '26313623630'
   };
 
 @NgModule({
