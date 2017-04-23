@@ -20,6 +20,10 @@ import { SponsorsComponent } from './views/pages/sponsors.component';
 import { SponsorshipComponent } from './views/pages/sponsorship.component';
 import { SurveyComponent } from './views/pages/survey.component';
 import { VolunteerComponent } from './views/pages/volunteer.component';
+import { EventsDBComponent } from './views/events/events-db.component';
+
+import { YearsService } from './dates/years.service';
+import { MonthsService } from './dates/months.service';
 
   const firebaseConfig = {
     apiKey: 'AIzaSyDX5q__U2DcJFDTh4WGticxKWL0T_KVDEc',
@@ -44,7 +48,8 @@ import { VolunteerComponent } from './views/pages/volunteer.component';
     SponsorsComponent,
     SponsorshipComponent,
     SurveyComponent,
-    VolunteerComponent
+    VolunteerComponent,
+    EventsDBComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,9 @@ import { VolunteerComponent } from './views/pages/volunteer.component';
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
-    Title
+    Title,
+    YearsService,
+    MonthsService
   ],
   entryComponents: [ AppComponent ],
   bootstrap: [ AppComponent ]

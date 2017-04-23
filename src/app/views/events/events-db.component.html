@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="container">
+    <div class="main">
+      <div class="intro">
+        <a class="meetups__join" href="http://www.meetup.com/Girl-Develop-It-Ann-Arbor/" target="_blank">Join Our Meetup Group &raquo;</a>
+
+        <h2>All Events</h2>
+
+        <p>Looking for slides or resources for a past event? <em>You've come to the right place!</em></p>
+
+        <div>
+          <ul *ngFor="let class of (classes | async)">
+            <li>{{ class.date }} - <a [href]="class.link" target="_blank">{{ class.class }}</a></li>
+          </ul>
+        </div>
+
+        <!--<div *ngFor="let year of years">
+          <h1>{{ year.yr }}</h1>
+          <div *ngFor="let month of months">
+            <h3>{{ month.month }} {{ year.yr }}</h3>
+          </div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -9,16 +9,14 @@ import { AngularFire, AuthProviders, AuthMethods, FirebaseListObservable } from 
 })
 export class OrganizerComponent implements OnInit {
 
-   items: FirebaseListObservable<any>;
+  classes: FirebaseListObservable<any>;
   name: any;
-  msgVal = '';
+  date: number = 0;
+  class: string = '';
+  link: string = '';
 
   constructor(public angularFire: AngularFire) {
-    this.items = angularFire.database.list('/messages', {
-      query: {
-        limitToLast: 50
-      }
-    });
+    this.classes = angularFire.database.list('/classes');
 
     this.angularFire.auth.subscribe(auth => {
       if (auth) {
@@ -28,16 +26,19 @@ export class OrganizerComponent implements OnInit {
 
   }
 
-   login() {
+  login() {
     this.angularFire.auth.login({
       provider: AuthProviders.Anonymous,
       method: AuthMethods.Anonymous
     });
   }
 
-  Send(desc: string) {
-      this.items.push({ message: desc});
-      this.msgVal = '';
+  onSubmit() {
+    this.classes.push({
+      class: this.class,
+      link: this.link,
+      date: this.date
+    });
   }
 
   ngOnInit() {

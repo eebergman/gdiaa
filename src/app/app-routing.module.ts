@@ -14,6 +14,8 @@ import { SurveyComponent } from './views/pages/survey.component';
 import { VolunteerComponent } from './views/pages/volunteer.component';
 import { OrganizerComponent } from './organizer/organizer.component';
 
+import { EventsDBComponent } from './views/events/events-db.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -26,7 +28,8 @@ const routes: Routes = [
   { path: 'sponsors', component: SponsorsComponent },
   { path: 'sponsorship', component: SponsorshipComponent },
   { path: 'survey', component: SurveyComponent },
-  { path: 'volunteer', component: VolunteerComponent }
+  { path: 'volunteer', component: VolunteerComponent },
+  { path: 'events-db', component: EventsDBComponent }
 ];
 
 @NgModule({
